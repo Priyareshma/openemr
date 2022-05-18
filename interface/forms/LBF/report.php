@@ -43,6 +43,8 @@ function lbf_report($pid, $encounter, $cols, $id, $formname, $no_wrap = false)
     $fres = sqlStatement("SELECT * FROM layout_options " .
     "WHERE form_id = ? AND uor > 0 " .
     "ORDER BY group_id, seq", array($formname));
+    print_r($fres);
+    die();
     while ($frow = sqlFetchArray($fres)) {
         $field_id  = $frow['field_id'];
         $currvalue = '';

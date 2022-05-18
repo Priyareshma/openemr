@@ -344,3 +344,5 @@ class C_FormVitals extends Controller
         $vitals->set_user($_SESSION['authUser']);
     }
 }
+
+

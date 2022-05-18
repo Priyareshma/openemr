@@ -34,7 +34,8 @@ class FormVitals extends ORDataObject
     const TABLE_NAME = "form_vitals";
 
     const LIST_OPTION_VITALS_INTERPRETATION = 'vitals-interpretation';
-    const LIST_OPTION_VITAL_OPTION = 'vital_option';
+    const
+    LIST_OPTION_VITAL_OPTION = 'vital_option';
 
 
     const MEASUREMENT_METRIC_ONLY = 4;

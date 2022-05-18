@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2022-04-12 09:38:24
+<?php /* Smarty version 2.6.33, created on 2022-05-05 13:26:22
          compiled from vitals_javascript_functions.tpl */ ?>
 <?php echo '
 <script>

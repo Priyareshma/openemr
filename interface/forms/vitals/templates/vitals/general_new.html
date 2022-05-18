@@ -250,7 +250,12 @@ function vitalsFormSubmitted() {
 
 
                                     <tr><td>&nbsp;</td></tr>
-                                    <tr><th class="text-left">{xlt t="Primary Pain"}</th></tr>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">{xlt t="Primary Pain"}</th>
+                                        </tr>
+                                    </thead>
+
 
                                     {include file='vitals_primary_pain_intensity.tpl'}
 
@@ -281,8 +286,9 @@ function vitalsFormSubmitted() {
                 <div class="form-group">
                     <div class="text-left position-override">
                         <div class="btn-group" role="group">
-                            <button type="submit" class="btn btn-primary btn-save editonly" name="Submit" value=''>{xlt t="Save"}</button>
-                            <button type="button" class="btn btn-secondary btn-cancel editonly" id="cancel" value=''>{xlt t="Cancel"}</button>
+                            <center><button type="submit" class="btn btn-primary btn-save editonly" name="Submit" value=''>{xlt t="Save"}</button>
+                            <a href="{$FORM_ACTION}/interface/forms/vitals/print.php?id={$vitals->get_id()|attr}" class="btn btn-warning btn-warning editonly" >{xlt t="Print"}</a>
+                            <button type="button" class="btn btn-secondary btn-cancel editonly" id="cancel" value=''>{xlt t="Cancel"}</button></center>
                         </div>
                     </div>
                 </div>

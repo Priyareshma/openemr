@@ -135,8 +135,8 @@ class VitalsService extends BaseService
                         id,uuid,`user`,groupname,authorized,activity,external_id
                          ,`date`,note
                         ,bpd,bps,weight,height,temperature,temp_method,pulse,respiration,BMI,BMI_status,waist_circ
-                         ,head_circ,oxygen_saturation,oxygen_flow_rate,inhaled_oxygen_concentration
-                         , ped_weight_height,ped_bmi,ped_head_circ,primary_pain_intensity,primary_pain_location,sample_note,primary_pain_laterality,primary_pain_radiation
+                        ,head_circ,oxygen_saturation,oxygen_flow_rate,inhaled_oxygen_concentration
+                        , ped_weight_height,ped_bmi,ped_head_circ,primary_pain_intensity,primary_pain_location,sample_note,primary_pain_laterality,primary_pain_radiation
                     FROM
                         form_vitals
                  ) vitals

@@ -39,11 +39,13 @@ $patientdob = getPatientData($patientid, "DOB");
 $dateofservice = fetchDateService($encounter);
 
 $visitid = empty($_REQUEST['visitid']) ? 0 : (0 + $_REQUEST['visitid']);
+
 if ($visitid < 0) {
     $visitid = 0 + $encounter; // -1 means current encounter
 }
 
 $formid = empty($_REQUEST['formid']) ? 0 : (0 + $_REQUEST['formid']);
+
 
 // True if to display as a form to complete, false to display as information.
 $isblankform = empty($_REQUEST['isform']) ? 0 : 1;
@@ -51,6 +53,7 @@ $isblankform = empty($_REQUEST['isform']) ? 0 : 1;
 $CPR = 4; // cells per row
 
 $grparr = array();
+
 getLayoutProperties($formname, $grparr, '*');
 $lobj = $grparr[''];
 $formtitle = $lobj['grp_title'];

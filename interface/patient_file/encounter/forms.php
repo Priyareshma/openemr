@@ -115,6 +115,7 @@ $(function () {
                 if ( response.locked ) {
                     var editButtonId = "form-edit-button-"+response.formDir+"-"+response.formId;
                     $("#"+editButtonId).replaceWith( response.editButtonHtml );
+
                 }
 
                 var logId = "esign-signature-log-"+response.formDir+"-"+response.formId;
@@ -932,7 +933,11 @@ if (
                     "onclick=\"return openEncounterForm(" . attr_js($formdir) . ", " .
                     attr_js($form_name) . ", " . attr_js($iter['form_id']) . ")\">";
                 echo "" . xlt('Edit') . "</a>";
+
+
             }
+
+
         }
 
         if (($esign->isButtonViewable() and $is_group == 0 and $authPostCalendarCategoryWrite) or ($esign->isButtonViewable() and $is_group and AclMain::aclCheckCore("groups", "glog", false, 'write') and $authPostCalendarCategoryWrite)) {
@@ -956,12 +961,15 @@ if (
         if (AclMain::aclCheckCore('admin', 'super')) {
             if ($formdir != 'newpatient' && $formdir != 'newGroupEncounter') {
                 // a link to delete the form from the encounter
+
                 echo "<a href='$rootdir/patient_file/encounter/delete_form.php?" .
                     "formname=" . attr_url($formdir) .
                     "&id=" . attr_url($iter['id']) .
                     "&encounter=" . attr_url($encounter) .
                     "&pid=" . attr_url($pid) .
                     "' class='btn btn-danger btn-sm btn-delete' title='" . xla('Delete this form') . "' onclick='top.restoreSession()'>" . xlt('Delete') . "</a>";
+
+
             } else {
                 // do not show delete button for main encounter here since it is displayed at top
             }

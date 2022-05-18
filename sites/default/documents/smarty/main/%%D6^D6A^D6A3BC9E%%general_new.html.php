@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2022-04-28 06:52:41
+<?php /* Smarty version 2.6.33, created on 2022-05-17 08:44:12
          compiled from C:%5Cxampp%5Chtdocs%5Copenemr%5Cinterface%5Cforms%5Cvitals/templates/vitals/general_new.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'headerTemplate', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 12, false),array('function', 'xlj', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 23, false),array('function', 'xlt', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 142, false),array('function', 'xla', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 148, false),array('modifier', 'attr', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 151, false),array('modifier', 'date_format', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 160, false),array('modifier', 'text', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 164, false),array('modifier', 'substr', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 217, false),array('modifier', 'js_escape', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 297, false),array('modifier', 'js_url', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 386, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'headerTemplate', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 12, false),array('function', 'xlj', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 23, false),array('function', 'xlt', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 142, false),array('function', 'xla', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 148, false),array('modifier', 'attr', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 151, false),array('modifier', 'date_format', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 160, false),array('modifier', 'text', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 164, false),array('modifier', 'substr', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 217, false),array('modifier', 'js_escape', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 303, false),array('modifier', 'js_url', 'C:\\xampp\\htdocs\\openemr\\interface\\forms\\vitals/templates/vitals/general_new.html', 392, false),)), $this); ?>
 <html>
 <head>
 <?php echo smarty_function_headerTemplate(array('assets' => 'datetime-picker'), $this);?>
@@ -337,8 +337,13 @@ unset($_smarty_tpl_vars);
 
 
                                     <tr><td>&nbsp;</td></tr>
-                                    <tr><th class="text-left"><?php echo smarty_function_xlt(array('t' => 'Primary Pain'), $this);?>
-</th></tr>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left"><?php echo smarty_function_xlt(array('t' => 'Primary Pain'), $this);?>
+</th>
+                                        </tr>
+                                    </thead>
+
 
                                     <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'vitals_primary_pain_intensity.tpl', 'smarty_include_vars' => array()));
@@ -391,10 +396,14 @@ unset($_smarty_tpl_vars);
                 <div class="form-group">
                     <div class="text-left position-override">
                         <div class="btn-group" role="group">
-                            <button type="submit" class="btn btn-primary btn-save editonly" name="Submit" value=''><?php echo smarty_function_xlt(array('t' => 'Save'), $this);?>
+                            <center><button type="submit" class="btn btn-primary btn-save editonly" name="Submit" value=''><?php echo smarty_function_xlt(array('t' => 'Save'), $this);?>
 </button>
+                            <a href="<?php echo $this->_tpl_vars['FORM_ACTION']; ?>
+/interface/forms/vitals/print.php?id=<?php echo ((is_array($_tmp=$this->_tpl_vars['vitals']->get_id())) ? $this->_run_mod_handler('attr', true, $_tmp) : attr($_tmp)); ?>
+" class="btn btn-warning btn-warning editonly" ><?php echo smarty_function_xlt(array('t' => 'Print'), $this);?>
+</a>
                             <button type="button" class="btn btn-secondary btn-cancel editonly" id="cancel" value=''><?php echo smarty_function_xlt(array('t' => 'Cancel'), $this);?>
-</button>
+</button></center>
                         </div>
                     </div>
                 </div>
